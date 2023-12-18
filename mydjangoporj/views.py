@@ -1,8 +1,17 @@
 # i have created this file - vikas
 from django.http import HttpResponse
+from django.shortcuts import render
 
 def index(request):
-    return HttpResponse('<h1> Hellow from index section</h1>')
+    params = {'name': 'vikas', 'place': 'USA'}
+    return render(request, 'index.html',params)
 
-def about(request):
-    return HttpResponse('Hellow from about section')
+def removePunc(request):
+    return HttpResponse('removePunc')
+
+def charCount(request):
+    return HttpResponse('charCount')
+
+def spaceRemove(request):
+    return HttpResponse('spaceRemove')
+
